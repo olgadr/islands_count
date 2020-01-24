@@ -1,0 +1,27 @@
+$colors-list: red #8E1CFF green #FF7DF5 blue grey pink yellow #5F9EA0 #B22222;
+@each $current-color in $colors-list {
+  $i: index($colors-list, $current-color);
+  .Grid-item.color-#{$i} {
+    background-color: $current-color;
+  }
+}
+
+.Grid {
+  align-self: center;
+
+  &-item {
+    background-color: #FFF;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    font-size: 16px;
+    text-align: center;
+    min-width: 20px;
+    min-height: 20px;
+
+    &.island {
+      background-color: #000;
+    }
+
+  }
+}
+
+
